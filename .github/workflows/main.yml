@@ -85,8 +85,8 @@ jobs:
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
           # на сервере и в docker-compose.yml не указывать версию
-          tags: dp09udina/taski_backend:latest 
-    frontend_tests:
+          tags: dp09udina/taski_backend:latest
+  frontend_tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -149,7 +149,7 @@ jobs:
           push: true
           # Тут вместо username должен быть ваш логин на Docker Hub
           tags: dp09udina/taski_gateway:latest
-    deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: 
       # Дождёмся билда всех образов Taski
